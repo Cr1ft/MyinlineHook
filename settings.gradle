@@ -1,0 +1,2 @@
+include ':myihk'
+rootProject.name='My InHk'

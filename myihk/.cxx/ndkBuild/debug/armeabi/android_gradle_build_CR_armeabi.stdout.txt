@@ -1,0 +1,2 @@
+Android NDK: WARNING:/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/model/Android.mk:imodel: LOCAL_LDLIBS is always ignored for static libraries    
+[armeabi] Compile++ thumb: CR <= MyHook.cpp

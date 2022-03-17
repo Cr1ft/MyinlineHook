@@ -1,0 +1,20 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 16 min SDK version: armeabi",
+    "file": "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON \u0027/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/.cxx/ndkBuild/debug/armeabi/android_gradle_build.json\u0027 was up-to-date",
+    "file": "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
+    "file": "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk",
+    "tag": "debug|armeabi"
+  }
+]

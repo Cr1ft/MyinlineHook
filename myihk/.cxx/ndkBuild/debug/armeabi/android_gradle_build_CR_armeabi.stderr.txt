@@ -1,0 +1,142 @@
+/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/build/core/setup-app.mk:81: Android NDK: Application targets deprecated ABI(s): armeabi    
+/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/build/core/setup-app.mk:82: Android NDK: Support for these ABIs will be removed in a future NDK release.    
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/Android.mk:1: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/model/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/src/Android.mk:1: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/src/dump/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/src/dump_just_ret/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/src/dump_with_ret/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/src/replace/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/src/Android.mk:3: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm/Android.mk:3: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/Android.mk:1: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/model/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/src/Android.mk:1: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/src/dump/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/src/dump_just_ret/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/src/dump_with_ret/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/src/replace/Android.mk:6: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/src/Android.mk:3: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/Android.mk:3: "abi: armeabi"
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/Android.mk:6: "abi: armeabi"
+In file included from /Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:10:
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/../include/myutil.h:58:21: warning: implicit conversion of NULL constant to 'Elf32_Addr' (aka 'unsigned int') [-Wnull-conversion]
+    Elf_Addr phof = NULL;
+             ~~~~   ^~~~
+                    0
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/../include/myutil.h:107:53: warning: format specifies type 'void *' but the argument has type 'Elf32_Addr' (aka 'unsigned int') [-Wformat]
+        {    __android_log_print(6,"r0ysue","%p %s",mytmpsym.st_value,strtab_+mytmpsym.st_name);
+                                             ~~     ^~~~~~~~~~~~~~~~~
+                                             %u
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:15:34: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+void *artaddress = getModuleAddr("libart.so");
+                                 ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:16:28: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+void *libc = getModuleAddr("libc.so");
+                           ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:18:32: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+void *strd = getAddrbySym(libc,"strstr");
+                               ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:19:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+void *invoke = getAddrbySym(artaddress,"_ZN3art9ArtMethod6InvokeEPNS_6ThreadEPjjPNS_6JValueEPKc");
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:20:46: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+void *PrettyMethod = getAddrbySym(artaddress,"_ZN3art12PrettyMethodEPNS_9ArtMethodEb");
+                                             ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:22:29: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+                            "_ZN3art11interpreter6DoCallILb0ELb0EEEbPNS_9ArtMethodEPNS_6ThreadERNS_11ShadowFrameEPKNS_11InstructionEtPNS_6JValueE");
+                            ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:100:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("release"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:102:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("incremental"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:104:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("user"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:106:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("host"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:108:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("fingerprint"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:110:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("buildID"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:112:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("type"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:114:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("tags"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:116:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("serial"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:118:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("hardware"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:120:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("model"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:122:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("brand"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:124:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("board"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:126:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("product"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:128:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("device"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:130:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("manufacturer"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:132:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("display"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:134:40: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value, (char*)get_value("time"));
+                                       ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:136:39: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value,(char*)get_value("fingerprint"))
+                                      ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:136:54: error: expected ';' after expression
+        strcpy(value,(char*)get_value("fingerprint"))
+                                                     ^
+                                                     ;
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:138:39: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        strcpy(value,(char*)get_value("fingerprint"))
+                                      ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:138:54: error: expected ';' after expression
+        strcpy(value,(char*)get_value("fingerprint"))
+                                                     ^
+                                                     ;
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:147:27: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+    if(oirstrstr(haystack,"frida") != nullptr || oirstrstr(needle,"frida") != nullptr ||
+                          ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:147:67: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+    if(oirstrstr(haystack,"frida") != nullptr || oirstrstr(needle,"frida") != nullptr ||
+                                                                  ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:148:27: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+       oirstrstr(haystack,"gum-js-loop") != nullptr || oirstrstr(needle,"gum-js-loop") != nullptr||
+                          ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:148:73: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+       oirstrstr(haystack,"gum-js-loop") != nullptr || oirstrstr(needle,"gum-js-loop") != nullptr||
+                                                                        ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:149:27: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+       oirstrstr(haystack,"gmain") != nullptr || oirstrstr(needle,"gmain") != NULL ||
+                          ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:149:67: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+       oirstrstr(haystack,"gmain") != nullptr || oirstrstr(needle,"gmain") != NULL ||
+                                                                  ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:150:27: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+       oirstrstr(haystack,"linjector") != nullptr || oirstrstr(needle,"linjector") != nullptr
+                          ^
+/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/test/MyHook.cpp:150:71: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+       oirstrstr(haystack,"linjector") != nullptr || oirstrstr(needle,"linjector") != nullptr
+                                                                      ^
+36 warnings and 2 errors generated.
+make: *** [/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi/objs-debug/CR/MyHook.o] Error 1

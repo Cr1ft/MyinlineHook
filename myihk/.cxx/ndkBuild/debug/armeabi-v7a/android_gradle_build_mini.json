@@ -1,0 +1,48 @@
+{
+  "buildFiles": [
+    "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk",
+    "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "buildTargetsCommand": "/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "dump-debug-armeabi-v7a": {
+      "artifactName": "dump",
+      "buildCommand": "/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/lib /Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libdump.a",
+      "abi": "armeabi-v7a",
+      "output": "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libdump.a"
+    },
+    "dump_just_ret-debug-armeabi-v7a": {
+      "artifactName": "dump_just_ret",
+      "buildCommand": "/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/lib /Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libdump_just_ret.a",
+      "abi": "armeabi-v7a",
+      "output": "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libdump_just_ret.a"
+    },
+    "imodel-debug-armeabi-v7a": {
+      "artifactName": "imodel",
+      "buildCommand": "/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/lib /Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libimodel.a",
+      "abi": "armeabi-v7a",
+      "output": "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libimodel.a"
+    },
+    "CR-debug-armeabi-v7a": {
+      "artifactName": "CR",
+      "buildCommand": "/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/lib /Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libCR.so",
+      "abi": "armeabi-v7a",
+      "output": "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libCR.so"
+    },
+    "replace-debug-armeabi-v7a": {
+      "artifactName": "replace",
+      "buildCommand": "/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/lib /Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libreplace.a",
+      "abi": "armeabi-v7a",
+      "output": "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libreplace.a"
+    },
+    "dump_with_ret-debug-armeabi-v7a": {
+      "artifactName": "dump_with_ret",
+      "buildCommand": "/Users/acraft/Library/Android/sdk/ndk/16.1.4479499/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/lib /Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libdump_with_ret.a",
+      "abi": "armeabi-v7a",
+      "output": "/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libdump_with_ret.a"
+    }
+  }
+}

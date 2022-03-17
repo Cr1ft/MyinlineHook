@@ -1,0 +1,2 @@
+Android NDK: WARNING:/Users/acraft/AndroidStudioProjects/inlinehook/Android_InlineHook/myihk/src/main/jni/arm64/model/Android.mk:imodel: LOCAL_LDLIBS is always ignored for static libraries    
+make: Nothing to be done for `CR'.
