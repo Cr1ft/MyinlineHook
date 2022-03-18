@@ -14,19 +14,35 @@
 
 void *artaddress = getModuleAddr("libart.so");
 void *libc = getModuleAddr("libc.so");
-
 void *strd = getAddrbySym(libc,"strstr");
 void *invoke = getAddrbySym(artaddress,"_ZN3art9ArtMethod6InvokeEPNS_6ThreadEPjjPNS_6JValueEPKc");
-void *PrettyMethod = getAddrbySym(artaddress,"_ZN3art12PrettyMethodEPNS_9ArtMethodEb");
+void *PrettyMethod = getAddrbySym(artaddress,"_ZN3art9ArtMethod12PrettyMethodEb");
 void *DoCall = getAddrbySym(artaddress,
                             "_ZN3art11interpreter6DoCallILb0ELb0EEEbPNS_9ArtMethodEPNS_6ThreadERNS_11ShadowFrameEPKNS_11InstructionEtPNS_6JValueE");
-
+//void *libc;
+//void *strd;
+//void *invoke;
+//void *PrettyMethod;
+//void *DoCall;
 JavaVM *global_jvm;
 jobject global_json;
+
+
 const char* global_name;
 prop_info* gloabl_pi;
 JNIEnv *global_env;
 
+
+void test(){
+    int a = 1+2;
+    char* (*ori_strstr)(const char* h, const char* n);
+    ori_strstr = strstr;
+    void *asd = getAddrbySym(libc,"strstr");
+    void *asdb = getAddrbySym(artaddress,"_ZN3art9ArtMethod6InvokeEPNS_6ThreadEPjjPNS_6JValueEPKc");
+    __android_log_print(6,"TTTT","YYYYY:%p",(void*)asd);
+    __android_log_print(6,"TTTT","YYYYY invoke:%p",(void*)asdb);
+    __android_log_print(6,"TTTT","YYYYY:%p",ori_strstr);
+}
 
 JNIEnv *get_env(int *attach) {
     if (global_jvm == NULL) return NULL;
@@ -161,7 +177,7 @@ void* my_invoke(void* t,void *a, void *b, void *c, void *d, void *e){
     auto pm = (def_PrettyMethod)PrettyMethod;
     auto oirinvoke = (def_invoke)getOriFunByHkFun((void*)my_invoke);
     int f = 1;
-    std::string mmm = pm(t,f);
+    std::string mmm = pm(t,true);
     if(!(strstr(mmm.c_str()," java.")!=NULL ||strstr(mmm.c_str()," android.") !=NULL|| strstr(mmm.c_str()," dalvik.")!=NULL
          ||strstr(mmm.c_str()," androidx.")!=NULL
     )){
@@ -227,7 +243,7 @@ void hookDoCall(){
         if(DoCall != NULL){
             const RetInfo &rep = dump_replace(DoCall, (void *) my_DoCall, NULL, NULL, NULL);
             if (rep.status != success) {
-                LE("hook docall error=%d", rep.status);
+                LE("hook docall error=%d1", rep.status);
             }
         }
     }

@@ -61,6 +61,7 @@ char * getAddrbySym(void *startr, char* symname){
     Elf_Xword strsz;
 
     memcpy(&header, startr, sizeof(Elf_Ehdr));
+//    __android_log_print(6,"TTTT","YYYYYPHOF1:%x",header.e_phoff);
     memcpy(&cc, ((char *) (startr) + header.e_phoff), sizeof(Elf_phdr));
     for (int y = 0; y < header.e_phnum; y++) {//寻找首段偏移
         memcpy(&cc, (char *) (startr) + header.e_phoff + sizeof(Elf_phdr) * y,
@@ -68,6 +69,7 @@ char * getAddrbySym(void *startr, char* symname){
         if (cc.p_type == 1) {
             //获取物理地址
             phof =cc.p_paddr;
+            __android_log_print(6,"TTTT","YYYYYPHOF:%p",phof);
             break;
         }
 
@@ -75,17 +77,19 @@ char * getAddrbySym(void *startr, char* symname){
     for (int y = 0; y < header.e_phnum; y++) {
         memcpy(&cc, (char *) (startr) + header.e_phoff + sizeof(Elf_phdr) * y,
                sizeof(Elf_phdr));
-        if (cc.p_type == 2) {
+        if (cc.p_type == 2) { // Dynamic Segment
             Elf_Dyn dd;
             for (y = 0; y == 0 || dd.d_tag != 0; y++) {
-                memcpy(&dd, (char *) (startr) + cc.p_offset + y * sizeof(Elf_Dyn) + 0x1000,
+                __android_log_print(6,"TTTT","YYYYYcc.p_offset:%p elf_dyn:%lx",cc.p_vaddr,sizeof(Elf_Dyn));
+                memcpy(&dd, (char *) (startr) + cc.p_vaddr + y * sizeof(Elf_Dyn),
                        sizeof(Elf_Dyn));
 
-                if (dd.d_tag == 5) {//符号表
+                if (dd.d_tag == 5) {//DT_STRTAB
                     //根据符号表解释 dptr指向了strtab的地址，此处需要
                     strtab_ = reinterpret_cast< char *>((char *) startr + dd.d_un.d_ptr - phof);
                 }
-                if (dd.d_tag == 6) {//字符串表
+                if (dd.d_tag == 6) {//DT_SYMTAB
+                    __android_log_print(6,"TTTT","YYYYDT_SYMTAB:%p",dd.d_un.d_ptr);
                     symtab_ = reinterpret_cast<Elf_Sym *>((
                             (char *) startr + dd.d_un.d_ptr - phof));
                 }
@@ -108,7 +112,8 @@ char * getAddrbySym(void *startr, char* symname){
             break;
         }
     }
-    return (char*)startr+mytmpsym.st_value-phof;
+    __android_log_print(6,"TTTT","YYYYY %s mytmpsym:%lx",symname,mytmpsym.st_value);
+    return (char*)startr+mytmpsym.st_value-phof;//
 }
 
 /**判断str1是否以str2开头

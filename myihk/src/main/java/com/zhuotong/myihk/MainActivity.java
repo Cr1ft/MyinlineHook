@@ -22,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+    public static void add(){
+        Log.d("YYYYY","XXXXXXXXXXXXXXXXXX");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NativeHelper.startNewPhone(JSONObject.parseObject("{\"serial\":\"12345567\"}"));
+                NativeHelper.startMethodTrace();
             }
         });
 

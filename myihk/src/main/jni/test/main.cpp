@@ -13,7 +13,7 @@
 
 JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved){
 
-    HookStrStr();
+
 
     return JNI_VERSION_1_4;
 }
@@ -73,7 +73,9 @@ extern "C"
 JNIEXPORT void JNICALL
 Java_com_craft_nativeJNI_NativeHelper_startMethodTrace(JNIEnv *env, jclass clazz) {
     // TODO: implement startMethodTrace()
+//    test();
     hookArtInvoke();
     hookDoCall();
+    HookStrStr();
 
 }
